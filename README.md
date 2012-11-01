@@ -1,6 +1,5 @@
 ### README.md for Cookbook - Django 1.4.2
-# Based on a German cookbook webapp tutorial found here: 
-[http://django-workshop.de](http://django-workshop.de)
+## Based on a German cookbook webapp tutorial found here: [http://django-workshop.de](http://django-workshop.de)
 
 ### I created this site to demonstrate what I can do.  I list features here as I add them to the site.
 

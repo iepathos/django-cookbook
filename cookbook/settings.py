@@ -6,7 +6,7 @@ SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
 DEBUG = False
 
 ADMINS = (
-    # ('Glen Baker', 'glen.b.baker@gmail.com),
+    # ('Glen Baker', 'iepathos@gmail.com),
 )
 
 MANAGERS = ADMINS
