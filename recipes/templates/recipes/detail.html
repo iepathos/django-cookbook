@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}{{ block.super }} - {{ object.title }}{% endblock %}
+
+{% block content %}
+{% load recipes %}
+
+<h2>{{ object.title }}</h2>
+{% is_author user object %}
+<a href="{% url recipes_recipe_edit object.pk %}">Edit Recipe</a>
+{% else %}
+Please <a href="{% url userauth_login %}">login</a> to edit the recipe.
+{% endis_author %}
+<a href="{% url recipes_recipe_index %}">Return to Overview</a>
+
+
+
+<a href='{% url recipes_recipe_detail_pdf object.slug %}'>View Recipe as PDF</a>
+<p> {{ object.number_of_portions }} 
+	Portion{{ object.number_of_portions|pluralize:"en" }}.</p>
+<h3>Ingredients</h3>
+{{ object.ingredients|linebreaks }}
+<h3>Preparation</h3>
+{{ object.preparation|linebreaks }}
+<p>Preparation time: {{ object.time_for_preparation }} minutes</p>
+
+<p>Difficulty: {{ object.get_difficulty_display }}</p>
+<p>Author: {{ object.author }}</p>
+
+<h4>Category{{ object.category.count|pluralize:"ies" }}</h4>
+<ul>
+	{% for category in object.category.all %}
+		<li>{{ category.name }}</li>
+	{% endfor %}
+	
+</ul>
+
+{% endblock %}

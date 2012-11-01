@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+<div class='container_12'>
+{% block title %}{{ block.super }} - All Recipes{% endblock %}
+
+{% block content %}
+
+
+<h2>All Recipes</h2>
+<a href="{% url recipes_recipe_add %}">Add Recipe</a>
+	
+
+</div>
+
+<div class='grid_10 suffix_1'>
+<ul>
+	{% for recipe in object_list %}
+	<li><a href="{{ recipe.get_absolute_url }}">{{ recipe.title }}</a></li>
+	{% endfor %}
+</ul>
+</div> <!-- End Recipe List Grid -->
+</div>
+</div>
+
+</div> <!-- End Page Container -->
+{% endblock %}

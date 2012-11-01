@@ -1,0 +1,30 @@
+[
+    {
+        "pk": 1,
+        "model": "recipes.category",
+        "fields": {
+            "description": "Good snack food.",
+            "name": "Snack",
+            "slug": "snack"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "recipes.recipe",
+        "fields": {
+            "category": [
+                1
+            ],
+            "time_for_preparation": 10,
+            "number_of_portions": 1,
+            "author": 1,
+            "ingredients": "1 can chickpeas/garbonzo beans (15 oz)\r\n2 tablespoons roasted garlic\r\n1/2 tablespoon lemon juice\r\n1 tablespoon olive oil\r\n1/2 teaspoon oregano",
+            "date_updated": "2012-10-28T21:02:02.301Z",
+            "title": "Hummus",
+            "preparation": "In a food processor, process beans, garlic, olive oil, lemon juice and oregano until desired consistency. If hummus is too thick, simply add olive oil in small increments (1/2 teaspoon) until desired consistency. \r\n\r\nServe roasted garlic hummus garnished with finely chopped parsley with hot pita bread, pita chips, or veggies. Roasted red pepper hummus goes very well with cubes of warm Italian bread. \r\n\r\nHummus can be prepared in advance up to two days if stored in airtight container in the refrigerator. To serve, heat in microwave or on stovetop.",
+            "difficulty": 1,
+            "date_created": "2012-10-28T21:02:02.301Z",
+            "slug": "hummus"
+        }
+    }
+]

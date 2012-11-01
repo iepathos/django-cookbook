@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ block.super }} - {{ object.title }}{% endblock %}
+
+{% block toggle_login %}{% endblock %}
+
+{% block content %}
+{% load recipes %}
+<h2>{{ object.title }}</h2>
+<p>Difficulty: {{ object.get_difficulty_display }}</p>
+<p>Portions: {{ object.number_of_portions }}
+	Portion{{ object.number_of_portions|pluralize:"en" }}.</p>
+<h3>Ingredients</h3>
+{{ object.ingredients|linebreaks }}
+<h3>Preparation</h3>
+{{ object.preparation|linebreaks }}
+<p>Preparation time: {{ object.time_of_preparation }} Minutes</p>
+<p> Author: {{ object.author }}</p>
+<h4>Category{{ object.category.count|pluralize:"n" }}</h4>
+<ul>
+	{% for category in object.category.all %}
+		<li>{{ category.name }}</li>
+	{% endfor %}
+</ul>
+{% endblock %}
