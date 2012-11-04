@@ -44,5 +44,3 @@ Database backup with banana pancakes and hummus recipes: backup.json
 Setup local_settings.py to hold local development environment settings for best practice.
 
 Initial functionality - Add recipes to your cookbook through admin interface
-
-### - codedodo
